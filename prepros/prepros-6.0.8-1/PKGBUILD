@@ -1,0 +1,19 @@
+# Maintainer: Kutabe <kutabe@ex.ua> 
+pkgname=prepros
+pkgver=6.0.8
+pkgrel=1
+pkgdesc="Compile less, sass, scss, compass, coffeescript, stylus, jade, slim, markdown, haml and livescript files with live browser refresh."
+arch=('x86_64')
+url="https://prepros.io"
+license=('mit')
+depends=('gconf' 'gvfs' 'glibc' 'libcap' 'libgcrypt' 'gtk2' 'libnotify' 'nss' 'udev' 'libxtst' 'xdg-utils')
+source=('https://prepros.io/downloads/stable/linux')
+sha256sums=('4957a575d9558564b9f1abe058f8e6bc33a2f7545573a737ab18a4e85e474362')
+
+package() {
+    msg2 "Extracting the data.tar.xz..."
+    bsdtar -xf data.tar.xz -C "$pkgdir/"
+    install -Dm644 "$pkgdir/usr/share/pixmaps/prepros.png" \
+    "$pkgdir/usr/share/icons/hicolor/512x512/apps/prepros.png"
+    rm -r "$pkgdir/usr/share/pixmaps"
+}
