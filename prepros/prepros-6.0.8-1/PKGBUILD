@@ -1,6 +1,6 @@
 # Maintainer: Kutabe <kutabe@ex.ua> 
 pkgname=prepros
-pkgver=6.0.8
+pkgver=6.0.10
 pkgrel=1
 pkgdesc="Compile less, sass, scss, compass, coffeescript, stylus, jade, slim, markdown, haml and livescript files with live browser refresh."
 arch=('x86_64')
@@ -8,7 +8,7 @@ url="https://prepros.io"
 license=('mit')
 depends=('gconf' 'gvfs' 'glibc' 'libcap' 'libgcrypt' 'gtk2' 'libnotify' 'nss' 'udev' 'libxtst' 'xdg-utils')
 source=('https://prepros.io/downloads/stable/linux')
-sha256sums=('4957a575d9558564b9f1abe058f8e6bc33a2f7545573a737ab18a4e85e474362')
+sha256sums=('f57cbb8e7e71242e69e939e7220652cde4b4a8677a1c47d3e1f6baf4c8a1061e')
 
 package() {
     msg2 "Extracting the data.tar.xz..."
